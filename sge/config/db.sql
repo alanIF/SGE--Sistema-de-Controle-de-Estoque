@@ -35,3 +35,7 @@ create table saida(
 	observacao text,
 	primary key(id)
 );
+
+ALTER TABLE produto ADD created_at2 timestamp ;
+ALTER TABLE produto ADD update_at timestamp ;
+
