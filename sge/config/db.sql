@@ -36,6 +36,8 @@ create table saida(
 	primary key(id)
 );
 
-ALTER TABLE produto ADD created_at2 timestamp ;
-ALTER TABLE produto ADD update_at timestamp ;
+
+php artisan make: migration create_produto_table  --create=produto
+php artisan make:migration create_saida_table  --create=saida
+php artisan make:migration create_entrada_table  --create=entrada
 
