@@ -28,7 +28,23 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/produtos/update/{id}',  [App\Http\Controllers\ProdutoController::class, 'update']);
     Route::get('/produtos/{id}/edit',  [App\Http\Controllers\ProdutoController::class, 'edit']);
     Route::delete('/produtos/delete/{id}',  [App\Http\Controllers\ProdutoController::class, 'delete']);
-    
+
+    Route::get('/entradas',  [App\Http\Controllers\EntradaController::class, 'index']);
+    Route::get('/entradas/new',  [App\Http\Controllers\EntradaController::class, 'new']);
+    Route::post('/entradas/add',  [App\Http\Controllers\EntradaController::class, 'add']);
+    Route::post('/entradas/update/{id}',  [App\Http\Controllers\EntradaController::class, 'update']);
+    Route::get('/entradas/{id}/edit',  [App\Http\Controllers\EntradaController::class, 'edit']);
+    Route::delete('/entradas/delete/{id}',  [App\Http\Controllers\EntradaController::class, 'delete']);
+
+    Route::get('/saidas',  [App\Http\Controllers\SaidaController::class, 'index']);
+    Route::get('/saidas/new',  [App\Http\Controllers\SaidaController::class, 'new']);
+    Route::post('/saidas/add',  [App\Http\Controllers\SaidaController::class, 'add']);
+    Route::post('/saidas/update/{id}',  [App\Http\Controllers\SaidaController::class, 'update']);
+    Route::get('/saidas/{id}/edit',  [App\Http\Controllers\SaidaController::class, 'edit']);
+    Route::delete('/saidas/delete/{id}',  [App\Http\Controllers\SaidaController::class, 'delete']);
+
+    Route::get('/relatorios',  [App\Http\Controllers\RelatorioController::class, 'index']);
+
 });
 
 

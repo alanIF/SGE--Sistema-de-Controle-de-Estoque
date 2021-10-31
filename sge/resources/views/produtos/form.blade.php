@@ -18,22 +18,24 @@
             @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Descrição </label>
-                <input type="text" name="descricao" class="form-control" placeholder="Descrição" value="{{$produto->descricao}}">
+                <input type="text" name="descricao" class="form-control" placeholder="Descrição" value="{{$produto->descricao}}" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Tipo </label>
-                <input type="text" name="tipo" class="form-control" placeholder="Tipo" value="{{$produto->tipo}}">
+                <input type="text" name="tipo" class="form-control" placeholder="Tipo" value="{{$produto->tipo}}" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Estoque Mínimo </label>
-                <input type="text" name="estoque_minimo" class="form-control" placeholder="Estoque" value="{{$produto->tipo}}">
+                <input type="number" name="estoque_minimo" class="form-control" placeholder="Estoque" value="{{$produto->estoque_minimo}}" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Estoque Atual </label>
-                <input type="text" name="estoque_atual" class="form-control" placeholder="Estoque Atual" value="{{$produto->estoque_atual}}">
+                <input type="number" name="estoque_atual" class="form-control" placeholder="Estoque Atual" value="{{$produto->estoque_atual}}" required>
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a class="btn btn-warning " href="{{url('produtos/')}}">Voltar</a>
+
             </form>
             @endif
             @if(Request::is('*/new'))
@@ -42,19 +44,19 @@
             @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Descrição </label>
-                <input type="text" name="descricao" class="form-control" placeholder="Descrição" >
+                <input type="text" name="descricao" class="form-control" placeholder="Descrição"  required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Tipo </label>
-                <input type="text" name="tipo" class="form-control" placeholder="Tipo" >
+                <input type="text" name="tipo" class="form-control" placeholder="Tipo" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Estoque Mínimo </label>
-                <input type="text" name="estoque_minimo" class="form-control" placeholder="Estoque" >
+                <input type="number name="estoque_minimo" class="form-control" placeholder="Estoque" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Estoque Atual </label>
-                <input type="text" name="estoque_atual" class="form-control" placeholder="Estoque Atual">
+                <input type="number" name="estoque_atual" class="form-control" placeholder="Estoque Atual" required>
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
