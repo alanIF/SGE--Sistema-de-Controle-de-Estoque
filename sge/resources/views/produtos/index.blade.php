@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Produtos</div>
 
@@ -29,7 +29,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($produtos as $p)
+                    @foreach($produtos as $p)
                             <td >{{$p->id}}</td>
                             <td>{{$p->descricao}}</td>
                             <td>{{$p->tipo}}</td>

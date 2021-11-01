@@ -35,6 +35,5 @@ class ProdutoController extends Controller
         $produto= Produto::findOrFail($id);
         $produto->delete();
         return Redirect::to('/produtos');
-
     }
 }
