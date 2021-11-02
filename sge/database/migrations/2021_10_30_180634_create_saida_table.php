@@ -19,8 +19,9 @@ class CreateSaidaTable extends Migration
             $table->bigInteger('id_usuario');
             $table->bigInteger('qtd');
             $table->text('data_saida');
-            $table->text('data_validade');
             $table->text('observacao');
+            $table->timestamps();
+
         });
     }
 

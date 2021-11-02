@@ -13,7 +13,7 @@ use Redirect;
 class EntradaController extends Controller
 {
     public function index(){
-        $sql = 'Select e.id id,p.descricao produto,e.data_entrada data_entrada,e.data_fabricacao data_fabricacao,e.data_validade data_validade,e.qtd qtd ,e.observacao obs from entrada e,produto p where e.id_produto=p.id';
+        $sql = 'Select e.id id,u.name usuario, p.descricao produto,e.data_entrada data_entrada,e.data_fabricacao data_fabricacao,e.data_validade data_validade,e.qtd qtd ,e.observacao obs from entrada e,produto p,users u where e.id_produto=p.id and e.id_usuario=u.id';
         $entradas = \DB::select($sql);
         return view('entradas.index', ['entradas' => $entradas]);
     }

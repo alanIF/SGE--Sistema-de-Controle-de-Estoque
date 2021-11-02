@@ -52,7 +52,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Estoque Mínimo </label>
-                <input type="number name="estoque_minimo" class="form-control" placeholder="Estoque" required>
+                <input type="number" name="estoque_minimo" class="form-control" placeholder="Estoque" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Estoque Atual </label>

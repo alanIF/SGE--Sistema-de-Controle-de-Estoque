@@ -70,7 +70,7 @@
                 <input type="text" class="form-control" name="data_validade" placeholder="Data de Validade"  data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required>
             </div>
             <div class="mb-3">
-                  <textarea class="form-control" rows="4" placeholder="Observação" name="obs"></textarea>
+                  <textarea class="form-control" rows="4" placeholder="Observação" name="obs" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <a class="btn btn-warning " href="{{url('entradas/')}}">Voltar</a>

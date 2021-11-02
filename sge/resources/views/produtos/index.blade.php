@@ -30,6 +30,7 @@
                         </thead>
                         <tbody>
                     @foreach($produtos as $p)
+                        <tr>
                             <td >{{$p->id}}</td>
                             <td>{{$p->descricao}}</td>
                             <td>{{$p->tipo}}</td>
@@ -37,7 +38,8 @@
                             <td>{{$p->estoque_atual}}</td>
                             <td><a class="btn btn-warning " href="produtos/{{$p->id}}/edit"><i class="fa fa-edit" ></i></a> </td>
                             <td>   <form action="produtos/delete/{{$p->id}}" method="post"> @csrf @method('delete')<button class="btn btn-danger"><i class="fa fa-trash" ></i></button></form></td>
-                     @endforeach
+                            </tr>
+                            @endforeach
                         </tbody>
                         <tfoot>
                             <tr >
